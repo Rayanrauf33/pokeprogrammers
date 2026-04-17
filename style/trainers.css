@@ -1,0 +1,109 @@
+/* ============================================================
+   trainers.css — Trainers page only
+   ============================================================ */
+
+/* ── PAGE HEADER ── */
+.page-header { position: relative; padding: 120px 5% 60px; background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 50%, #2d1f3d 100%); text-align: center; overflow: hidden; }
+.page-header__content h1 { font-family: var(--pixel); font-size: clamp(0.8rem, 2.5vw, 1.3rem); color: var(--white); margin-bottom: 14px; line-height: 2; }
+.page-header__content p  { color: rgba(255,255,255,0.6); font-size: 1rem; font-weight: 700; }
+.page-header__mon        { position: absolute; bottom: 0; width: 160px; opacity: 0.18; filter: drop-shadow(0 0 20px rgba(249,168,201,0.4)); }
+.page-header__mon.left   { left: 3%; animation: floatA 6s ease-in-out infinite; }
+.page-header__mon.right  { right: 3%; animation: floatC 7s ease-in-out infinite; }
+
+/* ── CREATE FORM ── */
+.create-section { padding: 48px 5% 0; background: var(--cream); }
+.create-form    { max-width: 700px; margin: 0 auto; background: var(--white); border: 2px solid var(--pink-soft); border-radius: var(--radius); padding: 32px 36px; box-shadow: var(--shadow); }
+.create-form h2 { font-family: var(--pixel); font-size: 0.6rem; color: var(--navy); margin-bottom: 20px; line-height: 2; }
+.form-row       { display: flex; gap: 12px; flex-wrap: wrap; }
+.form-row input { flex: 1; min-width: 200px; padding: 14px 18px; border: 2px solid var(--pink-soft); border-radius: 50px; font-family: var(--body); font-size: 0.95rem; font-weight: 700; outline: none; transition: border-color 0.2s; color: var(--navy); }
+.form-row input:focus { border-color: var(--pink-deep); }
+.form-hint      { font-size: 0.78rem; color: var(--muted); margin-top: 12px; }
+
+/* ── SEARCH BAR ── */
+.search-section { padding: 28px 5% 0; background: var(--cream); }
+.search-wrap    { max-width: 700px; margin: 0 auto; display: flex; align-items: center; gap: 12px; background: var(--white); border: 2px solid var(--pink-soft); border-radius: 50px; padding: 10px 20px; box-shadow: var(--shadow); }
+.search-icon    { font-size: 1.1rem; }
+.search-wrap input { flex: 1; border: none; outline: none; font-family: var(--body); font-size: 0.95rem; font-weight: 700; color: var(--navy); background: transparent; }
+.search-wrap input::placeholder { color: var(--muted); font-weight: 600; }
+.trainer-count  { font-family: var(--pixel); font-size: 0.45rem; color: var(--pink-deep); white-space: nowrap; line-height: 1.8; }
+
+/* ── TRAINERS GRID ── */
+.trainers-section { padding: 36px 5% 80px; background: var(--cream); }
+.trainers-grid    { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; max-width: 1200px; margin: 0 auto; }
+
+/* ── TRAINER CARD ── */
+.trainer-card { background: var(--white); border: 2px solid var(--pink-soft); border-radius: var(--radius); padding: 28px 24px; box-shadow: var(--shadow); transition: all 0.3s ease; display: flex; flex-direction: column; gap: 16px; }
+.trainer-card:hover { transform: translateY(-6px); border-color: var(--pink); box-shadow: var(--shadow-p); }
+.trainer-card__top    { display: flex; align-items: center; gap: 16px; }
+.trainer-card__avatar { width: 64px; height: 64px; border-radius: 50%; border: 3px solid var(--pink-soft); object-fit: cover; flex-shrink: 0; }
+.trainer-card__name   { font-family: var(--pixel); font-size: 0.55rem; color: var(--navy); line-height: 1.8; }
+.trainer-card__id     { font-size: 0.75rem; color: var(--muted); font-weight: 700; margin-top: 2px; }
+
+/* Stat badges */
+.trainer-card__badges { display: flex; gap: 8px; flex-wrap: wrap; }
+.badge          { padding: 4px 12px; border-radius: 50px; font-size: 0.75rem; font-weight: 800; }
+.badge--wins    { background: #d4edda; color: #155724; }
+.badge--losses  { background: #f8d7da; color: #721c24; }
+.badge--pokemon { background: var(--pink-pale); color: var(--pink-deep); }
+
+/* Party preview */
+.trainer-card__party { display: flex; align-items: center; gap: 4px; }
+.trainer-card__party img { width: 48px; height: 48px; image-rendering: pixelated; object-fit: contain; transition: transform 0.2s; }
+.trainer-card__party img:hover { transform: scale(1.2) translateY(-4px); }
+.party-empty    { font-size: 0.75rem; color: var(--muted); font-weight: 700; }
+
+/* Action buttons */
+.trainer-card__actions { display: flex; gap: 10px; margin-top: 4px; }
+.btn--edit   { padding: 8px 20px; border-radius: 50px; font-weight: 800; font-size: 0.82rem; background: var(--pink-pale); color: var(--pink-deep); border: 2px solid var(--pink-soft); cursor: pointer; transition: all 0.2s; }
+.btn--edit:hover   { background: var(--pink-soft); }
+.btn--delete { padding: 8px 20px; border-radius: 50px; font-weight: 800; font-size: 0.82rem; background: #fff0f0; color: #c0392b; border: 2px solid #ffd0d0; cursor: pointer; transition: all 0.2s; }
+.btn--delete:hover { background: #ffd0d0; }
+
+/* ── EMPTY STATE ── */
+.empty-state     { grid-column: 1 / -1; text-align: center; padding: 60px 20px; }
+.empty-state img { width: 120px; margin: 0 auto 20px; }
+.empty-state h3  { font-family: var(--pixel); font-size: 0.65rem; color: var(--navy); margin-bottom: 10px; line-height: 2; }
+.empty-state p   { color: var(--muted); font-size: 0.9rem; font-weight: 600; }
+
+/* ── EDIT MODAL ── */
+.modal-overlay { display: none; position: fixed; inset: 0; background: rgba(26,35,64,0.6); backdrop-filter: blur(6px); z-index: 2000; align-items: center; justify-content: center; }
+.modal-overlay.open { display: flex; }
+.modal         { background: var(--white); border: 2px solid var(--pink-soft); border-radius: var(--radius); padding: 40px 36px; max-width: 420px; width: 90%; text-align: center; position: relative; box-shadow: 0 20px 60px rgba(26,35,64,0.3); animation: fadeUp 0.3s ease; }
+.modal__close  { position: absolute; top: 16px; right: 16px; background: var(--pink-pale); border: none; border-radius: 50%; width: 32px; height: 32px; font-size: 1rem; cursor: pointer; color: var(--pink-deep); font-weight: 900; transition: background 0.2s; }
+.modal__close:hover { background: var(--pink-soft); }
+.modal__mon    { width: 100px; height: 100px; object-fit: contain; margin: 0 auto 16px; animation: floatC 4s ease-in-out infinite; }
+.modal__title  { font-family: var(--pixel); font-size: 0.65rem; color: var(--navy); margin-bottom: 20px; line-height: 2; }
+.modal input   { width: 100%; padding: 14px 18px; border: 2px solid var(--pink-soft); border-radius: 50px; font-family: var(--body); font-size: 0.95rem; font-weight: 700; outline: none; margin-bottom: 16px; color: var(--navy); transition: border-color 0.2s; }
+.modal input:focus { border-color: var(--pink-deep); }
+/* ── FIX BUTTON OVERFLOW ── */
+
+.trainer-card__actions {
+  display: flex;
+  flex-wrap: wrap;           /* allow wrapping */
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.trainer-card__actions button {
+  flex: 1 1 calc(50% - 8px); /* 2 buttons per row */
+  text-align: center;
+  padding: 8px 10px;
+  font-size: 0.75rem;
+}
+
+/* Make Select button full width (looks better) */
+.trainer-card__actions .select-btn {
+  flex: 1 1 100%;
+}
+
+/* Optional: keep spacing clean on small screens */
+@media (max-width: 400px) {
+  .trainer-card__actions button {
+    flex: 1 1 100%;
+  }
+}
+/* ── RESPONSIVE ── */
+@media (max-width: 600px) {
+  .form-row { flex-direction: column; }
+  .trainers-grid { grid-template-columns: 1fr; }
+}

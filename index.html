@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PokeProgrammers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="navbar__logo">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt="Pikachu">
+      <span>PokeProgrammers</span>
+    </div>
+    <ul class="navbar__links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="trainers.html">Trainers</a></li>
+      <li><a href="pokedex.html">Pokédex</a></li>
+      <li><a href="party.html">Party</a></li>
+      <li><a href="battle.html">Battle</a></li>
+      <li><a href="leaderboard.html">Leaderboard</a></li>
+    </ul>
+    <button class="navbar__hamburger">☰</button>
+  </nav>
+
+  <div class="mobile-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="trainers.html">Trainers</a></li>
+      <li><a href="pokedex.html">Pokédex</a></li>
+      <li><a href="party.html">Party</a></li>
+      <li><a href="battle.html">Battle</a></li>
+      <li><a href="leaderboard.html">Leaderboard</a></li>
+    </ul>
+  </div>
+
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__bg-pokemon">
+      <!-- All images set directly via src from PokeAPI official artwork -->
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"   class="bg-mon mon-1" alt="">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/150.png" class="bg-mon mon-2" alt="">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"  class="bg-mon mon-3" alt="">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/94.png"  class="bg-mon mon-4" alt="">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/448.png" class="bg-mon mon-5" alt="">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/133.png" class="bg-mon mon-6" alt="">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/39.png"  class="bg-mon mon-7" alt="">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/131.png" class="bg-mon mon-8" alt="">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/35.png"  class="bg-mon mon-9" alt="">
+    </div>
+
+    <div class="hero__content">
+      <p class="hero__eyebrow">✨ Welcome, Trainer ✨</p>
+      <h1 class="hero__title">Catch. Train.<br><span class="hero__highlight">Battle. Dominate.</span></h1>
+      <p class="hero__subtitle">Build your dream team, manage your trainers, and battle your way to the top. The cutest Pokémon trainer platform ever made.</p>
+      <div class="hero__cta">
+        <a href="trainers.html" class="btn btn--primary">Start Your Journey</a>
+        <a href="battle.html" class="btn btn--outline">Enter Battle Arena</a>
+      </div>
+    </div>
+
+    <div class="hero__scroll-hint">
+      <span>scroll down</span>
+      <div class="arrow-bounce">↓</div>
+    </div>
+  </section>
+
+
+  <!-- POKEMON MARCH ROW -->
+  <div class="march-row">
+    <div class="march-track">
+      <!-- duplicated for seamless loop -->
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"   alt="Bulbasaur">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png"   alt="Charmander">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png"   alt="Squirtle">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"  alt="Pikachu">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/39.png"  alt="Jigglypuff">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/52.png"  alt="Meowth">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/133.png" alt="Eevee">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/143.png" alt="Snorlax">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/152.png" alt="Chikorita">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/155.png" alt="Cyndaquil">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/158.png" alt="Totodile">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/175.png" alt="Togepi">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/252.png" alt="Treecko">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/255.png" alt="Torchic">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/258.png" alt="Mudkip">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/393.png" alt="Piplup">
+      <!-- duplicate for seamless scroll -->
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"   alt="">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png"   alt="">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png"   alt="">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"  alt="">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/39.png"  alt="">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/52.png"  alt="">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/133.png" alt="">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/143.png" alt="">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/152.png" alt="">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/155.png" alt="">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/158.png" alt="">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/175.png" alt="">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/252.png" alt="">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/255.png" alt="">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/258.png" alt="">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/393.png" alt="">
+    </div>
+  </div>
+
+
+  <!-- STATS BAR -->
+  <section class="stats-bar">
+    <div class="stats-bar__container">
+      <div class="stat-item">
+        <span class="stat-item__number" id="stat-trainers">0</span>
+        <span class="stat-item__label">Trainers Registered</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-item__number" id="stat-pokemon">0</span>
+        <span class="stat-item__label">Pokémon Caught</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-item__number" id="stat-battles">0</span>
+        <span class="stat-item__label">Battles Fought</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-item__number" id="stat-parties">0</span>
+        <span class="stat-item__label">Parties Built</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FEATURES -->
+  <section class="features">
+    <div class="section-header">
+      <h2>Everything You Need</h2>
+      <p>One platform to manage your entire Pokémon journey.</p>
+    </div>
+    <div class="features__grid">
+      <div class="feature-card">
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png" alt="Pikachu" class="feature-card__mon">
+        <div class="feature-card__icon">👤</div>
+        <h3>Manage Trainers</h3>
+        <p>Create, update, and delete trainer profiles. Track every trainer's full journey.</p>
+      </div>
+      <div class="feature-card">
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/39.png" alt="Jigglypuff" class="feature-card__mon">
+        <div class="feature-card__icon">⚡</div>
+        <h3>Catch Pokémon</h3>
+        <p>Search by name or catch a random one. Real data from the official Pokédex API.</p>
+      </div>
+      <div class="feature-card">
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/448.png" alt="Lucario" class="feature-card__mon">
+        <div class="feature-card__icon">⚔️</div>
+        <h3>Battle Arena</h3>
+        <p>Pit two trainers against each other. Watch the battle unfold automatically.</p>
+      </div>
+      <div class="feature-card">
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/175.png" alt="Togepi" class="feature-card__mon">
+        <div class="feature-card__icon">🏆</div>
+        <h3>Leaderboard</h3>
+        <p>See who reigns supreme. Track wins, losses, and climb the rankings.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-it-works">
+    <div class="section-header">
+      <h2>How It Works</h2>
+      <p>Your path to becoming the greatest trainer.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step__num">01</div>
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/128.png" alt="" class="step__mon">
+        <h3>Create a Trainer</h3>
+        <p>Register with a name and avatar. Your journey starts here.</p>
+      </div>
+      <div class="step__arrow">→</div>
+      <div class="step">
+        <div class="step__num">02</div>
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/54.png" alt="" class="step__mon">
+        <h3>Catch Pokémon</h3>
+        <p>Search by name or catch a random one from the wild.</p>
+      </div>
+      <div class="step__arrow">→</div>
+      <div class="step">
+        <div class="step__num">03</div>
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png" alt="" class="step__mon">
+        <h3>Build Your Party</h3>
+        <p>Pick your best 6 for battle. Store the rest in your box.</p>
+      </div>
+      <div class="step__arrow">→</div>
+      <div class="step">
+        <div class="step__num">04</div>
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/257.png" alt="" class="step__mon">
+        <h3>Battle!</h3>
+        <p>Watch the battle play out. Win, level up, and dominate.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FEATURED POKEMON -->
+  <section class="featured-pokemon">
+    <div class="section-header">
+      <h2>Pokémon of the Day</h2>
+      <p>Fresh from the Pokédex. Three random picks just for you.</p>
+    </div>
+    <div class="featured-grid">
+
+      <div class="poke-card">
+        <div class="poke-card__shine"></div>
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/143.png" alt="Snorlax" class="poke-card__img">
+        <h3 class="poke-card__name">Snorlax</h3>
+        <div class="poke-card__types">
+          <span class="type-badge" style="background:#A8A878;color:#333">normal</span>
+        </div>
+      </div>
+
+      <div class="poke-card poke-card--big">
+        <div class="poke-card__shine"></div>
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/282.png" alt="Gardevoir" class="poke-card__img">
+        <h3 class="poke-card__name">Gardevoir</h3>
+        <div class="poke-card__types">
+          <span class="type-badge" style="background:#F85888;color:#fff">psychic</span>
+          <span class="type-badge" style="background:#EE99AC;color:#333">fairy</span>
+        </div>
+      </div>
+
+      <div class="poke-card">
+        <div class="poke-card__shine"></div>
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/446.png" alt="Munchlax" class="poke-card__img">
+        <h3 class="poke-card__name">Munchlax</h3>
+        <div class="poke-card__types">
+          <span class="type-badge" style="background:#A8A878;color:#333">normal</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- MINI LEADERBOARD -->
+  <section class="mini-leaderboard">
+    <div class="section-header">
+      <h2>Top Trainers</h2>
+      <p>The best of the best. Can you beat them?</p>
+    </div>
+    <div class="podium">
+      <div class="podium-card podium-card--silver">
+        <div class="podium-card__medal">🥈</div>
+        <img src="https://ui-avatars.com/api/?name=Trainer+2&background=ffd6e7&color=333&size=128&bold=true&rounded=true" alt="" class="podium-card__avatar" id="leader-avatar-2">
+        <h3 id="leader-name-2">---</h3>
+        <p id="leader-wins-2">0 Wins</p>
+      </div>
+      <div class="podium-card podium-card--gold">
+        <div class="podium-card__medal">🥇</div>
+        <img src="https://ui-avatars.com/api/?name=Trainer+1&background=ffd6e7&color=333&size=128&bold=true&rounded=true" alt="" class="podium-card__avatar" id="leader-avatar-1">
+        <h3 id="leader-name-1">---</h3>
+        <p id="leader-wins-1">0 Wins</p>
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/384.png" alt="" class="podium-card__pokemon">
+      </div>
+      <div class="podium-card podium-card--bronze">
+        <div class="podium-card__medal">🥉</div>
+        <img src="https://ui-avatars.com/api/?name=Trainer+3&background=ffd6e7&color=333&size=128&bold=true&rounded=true" alt="" class="podium-card__avatar" id="leader-avatar-3">
+        <h3 id="leader-name-3">---</h3>
+        <p id="leader-wins-3">0 Wins</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:40px">
+      <a href="leaderboard.html" class="btn btn--primary">View Full Leaderboard</a>
+    </div>
+  </section>
+
+
+  <!-- FOOTER POKEMON SCATTER -->
+  <div class="footer-scatter">
+    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/350.png" alt="" class="fs1">
+    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/370.png" alt="" class="fs2">
+    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/700.png" alt="" class="fs3">
+    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/39.png"  alt="" class="fs4">
+    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/183.png" alt="" class="fs5">
+  </div>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__content">
+      <div class="footer__logo">
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt="Pikachu">
+        <span>PokeProgrammers</span>
+      </div>
+      <p class="footer__tagline">Built by trainers, for trainers. 💕</p>
+      <nav class="footer__links">
+        <a href="index.html">Home</a>
+        <a href="trainers.html">Trainers</a>
+        <a href="pokedex.html">Pokédex</a>
+        <a href="party.html">Party</a>
+        <a href="battle.html">Battle</a>
+        <a href="leaderboard.html">Leaderboard</a>
+      </nav>
+      <p class="footer__copy">© 2025 PokeProgrammers. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

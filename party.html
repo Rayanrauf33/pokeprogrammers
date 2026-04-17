@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Party Manager — PokeProgrammers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/party.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="navbar__logo">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt="Pikachu">
+      <span>PokeProgrammers</span>
+    </div>
+    <ul class="navbar__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="trainers.html">Trainers</a></li>
+      <li><a href="pokedex.html">Pokédex</a></li>
+      <li><a href="party.html" class="active">Party</a></li>
+      <li><a href="battle.html">Battle</a></li>
+      <li><a href="leaderboard.html">Leaderboard</a></li>
+    </ul>
+    <button class="navbar__hamburger">☰</button>
+  </nav>
+
+  <div class="mobile-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="trainers.html">Trainers</a></li>
+      <li><a href="pokedex.html">Pokédex</a></li>
+      <li><a href="party.html">Party</a></li>
+      <li><a href="battle.html">Battle</a></li>
+      <li><a href="leaderboard.html">Leaderboard</a></li>
+    </ul>
+  </div>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <img class="page-header__mon left" src="" alt="">
+    <img class="page-header__mon right" src="" alt="">
+    <div class="page-header__content">
+      <h1>Party Manager</h1>
+      <p>Build your best six and prepare for battle.</p>
+    </div>
+  </div>
+
+  <!-- ACTIVE TRAINER -->
+  <section class="party-topbar">
+    <div class="active-trainer-badge" id="active-trainer-badge">
+      Active Trainer: ---
+    </div>
+  </section>
+
+  <!-- MAIN LAYOUT -->
+  <section class="party-layout" id="party-layout">
+
+    <!-- PARTY PANEL -->
+    <div class="party-panel">
+      <div class="panel-header">
+        <h2>Your Party</h2>
+        <p>Maximum 6 Pokémon</p>
+      </div>
+
+      <div class="party-grid" id="party-grid">
+        <!-- JS injects 6 slots -->
+      </div>
+    </div>
+
+    <!-- COLLECTION PANEL -->
+    <div class="collection-panel">
+      <div class="panel-header">
+        <h2>Collection</h2>
+        <p>All Pokémon caught by this trainer</p>
+      </div>
+
+      <div class="collection-grid" id="collection-grid">
+        <!-- JS injects cards -->
+      </div>
+
+      <div class="empty-state" id="collection-empty">
+        <img src="" alt="" id="collection-empty-mon">
+        <h3>No Pokémon yet!</h3>
+        <p>Go to the Pokédex and catch some first.</p>
+        <a href="pokedex.html" class="btn btn--primary" style="margin-top:16px;">Go to Pokédex</a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- NO TRAINER -->
+  <section class="missing-trainer" id="missing-trainer">
+    <div class="missing-trainer__card">
+      <img src="" alt="" id="missing-trainer-mon">
+      <h2>No Active Trainer</h2>
+      <p>Select a trainer first from the Trainers page to manage a party.</p>
+      <a href="trainers.html" class="btn btn--primary">Go to Trainers</a>
+    </div>
+  </section>
+
+  <!-- TOAST -->
+  <div class="party-toast" id="party-toast"></div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__content">
+      <div class="footer__logo">
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt="Pikachu">
+        <span>PokeProgrammers</span>
+      </div>
+      <p class="footer__tagline">Built by trainers, for trainers. 💕</p>
+      <nav class="footer__links">
+        <a href="index.html">Home</a>
+        <a href="trainers.html">Trainers</a>
+        <a href="pokedex.html">Pokédex</a>
+        <a href="party.html">Party</a>
+        <a href="battle.html">Battle</a>
+        <a href="leaderboard.html">Leaderboard</a>
+      </nav>
+      <p class="footer__copy">© 2025 PokeProgrammers. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/party.js"></script>
+</body>
+</html>

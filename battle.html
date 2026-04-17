@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Battle Arena — PokeProgrammers</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/battle.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="navbar__logo">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt="Pikachu">
+      <span>PokeProgrammers</span>
+    </div>
+    <ul class="navbar__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="trainers.html">Trainers</a></li>
+      <li><a href="pokedex.html">Pokédex</a></li>
+      <li><a href="party.html">Party</a></li>
+      <li><a href="battle.html" class="active">Battle</a></li>
+      <li><a href="leaderboard.html">Leaderboard</a></li>
+    </ul>
+    <button class="navbar__hamburger">☰</button>
+  </nav>
+
+  <div class="mobile-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="trainers.html">Trainers</a></li>
+      <li><a href="pokedex.html">Pokédex</a></li>
+      <li><a href="party.html">Party</a></li>
+      <li><a href="battle.html">Battle</a></li>
+      <li><a href="leaderboard.html">Leaderboard</a></li>
+    </ul>
+  </div>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <img class="page-header__mon left" src="" alt="">
+    <img class="page-header__mon right" src="" alt="">
+    <div class="page-header__content">
+      <h1>Battle Arena</h1>
+      <p>Train. Fight. Dominate.</p>
+    </div>
+  </div>
+
+  <!-- CONTROLS -->
+  <section class="battle-controls">
+    <div class="battle-card">
+      <div class="battle-top">
+        <div class="active-trainer-badge" id="active-trainer-badge">Active Trainer: ---</div>
+      </div>
+
+      <div class="battle-form">
+        <select id="opponent-type">
+          <option value="ai">AI Opponent</option>
+          <option value="trainer">Trainer Opponent</option>
+        </select>
+
+        <select id="trainer-select" disabled>
+          <option value="">Select Trainer</option>
+        </select>
+
+        <button class="btn btn--primary" id="start-battle">Start Battle</button>
+      </div>
+
+      <p class="battle-hint">
+        Your active trainer and opponent both need at least 2 Pokémon in their party.
+      </p>
+    </div>
+  </section>
+
+  <!-- ARENA -->
+  <section class="battle-section">
+    <div class="battle-card arena-card">
+      <div class="fighter fighter--placeholder" id="player-box">
+        <img src="" alt="" id="player-placeholder-mon">
+        <h3>Your Trainer</h3>
+        <p>Pick an opponent and start the battle.</p>
+      </div>
+
+      <div class="vs-badge">VS</div>
+
+      <div class="fighter fighter--placeholder" id="enemy-box">
+        <img src="" alt="" id="enemy-placeholder-mon">
+        <h3>Opponent</h3>
+        <p>AI or another trainer will appear here.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOG -->
+  <section class="battle-section">
+    <div class="battle-card log-card">
+      <div class="panel-header">
+        <h2>Battle Log</h2>
+        <p>Round-by-round battle events appear here.</p>
+      </div>
+
+      <div class="battle-log" id="battle-log">
+        <div class="log-entry log-entry--system">No battle started yet.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WINNER POPUP -->
+  <div class="winner-overlay" id="winner-overlay">
+    <div class="winner-box">
+      <img src="" alt="" id="winner-mon">
+      <h2 id="winner-text">Winner!</h2>
+      <p id="winner-subtext">The arena has a new champion.</p>
+      <button class="btn btn--primary" id="close-winner">Continue</button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__content">
+      <div class="footer__logo">
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt="Pikachu">
+        <span>PokeProgrammers</span>
+      </div>
+      <p class="footer__tagline">Built by trainers, for trainers. 💕</p>
+      <nav class="footer__links">
+        <a href="index.html">Home</a>
+        <a href="trainers.html">Trainers</a>
+        <a href="pokedex.html">Pokédex</a>
+        <a href="party.html">Party</a>
+        <a href="battle.html">Battle</a>
+        <a href="leaderboard.html">Leaderboard</a>
+      </nav>
+      <p class="footer__copy">© 2025 PokeProgrammers. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/battle.js"></script>
+</body>
+</html>

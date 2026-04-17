@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trainer Profile — PokeProgrammers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/profile.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="navbar__logo">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt="Pikachu">
+      <span>PokeProgrammers</span>
+    </div>
+    <ul class="navbar__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="trainers.html" class="active">Trainers</a></li>
+      <li><a href="pokedex.html">Pokédex</a></li>
+      <li><a href="party.html">Party</a></li>
+      <li><a href="battle.html">Battle</a></li>
+      <li><a href="leaderboard.html">Leaderboard</a></li>
+    </ul>
+    <button class="navbar__hamburger">☰</button>
+  </nav>
+
+  <div class="mobile-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="trainers.html">Trainers</a></li>
+      <li><a href="pokedex.html">Pokédex</a></li>
+      <li><a href="party.html">Party</a></li>
+      <li><a href="battle.html">Battle</a></li>
+      <li><a href="leaderboard.html">Leaderboard</a></li>
+    </ul>
+  </div>
+
+
+  <!-- PROFILE HEADER -->
+  <div class="profile-header">
+    <img class="profile-header__bg-mon left"  src="" alt="">
+    <img class="profile-header__bg-mon right" src="" alt="">
+    <a href="trainers.html" class="back-btn">← Back to Trainers</a>
+    <img class="profile-avatar" id="profile-avatar" src="" alt="Trainer Avatar">
+    <h1 class="profile-name"  id="profile-name">---</h1>
+    <p  class="profile-id"    id="profile-id">ID #----</p>
+
+    <!-- Stat badges -->
+    <div class="profile-stats" id="profile-stats">
+      <div class="profile-stat">
+        <span class="profile-stat__num" id="stat-wins">0</span>
+        <span class="profile-stat__label">Wins</span>
+      </div>
+      <div class="profile-stat">
+        <span class="profile-stat__num" id="stat-losses">0</span>
+        <span class="profile-stat__label">Losses</span>
+      </div>
+      <div class="profile-stat">
+        <span class="profile-stat__num" id="stat-total-pokemon">0</span>
+        <span class="profile-stat__label">Pokémon</span>
+      </div>
+      <div class="profile-stat">
+        <span class="profile-stat__num" id="stat-party-size">0</span>
+        <span class="profile-stat__label">In Party</span>
+      </div>
+    </div>
+
+    <a href="party.html" class="btn btn--primary" id="manage-party-btn">Manage Party →</a>
+  </div>
+
+
+  <!-- POKEMON COLLECTION -->
+  <section class="profile-section">
+    <div class="section-header">
+      <h2>Pokémon Collection</h2>
+      <p id="collection-subtitle">All Pokémon owned by this trainer.</p>
+    </div>
+    <div class="pokemon-grid" id="pokemon-grid">
+      <!-- Filled by JS -->
+      <div class="empty-state" id="no-pokemon">
+        <img src="" alt="" id="no-pokemon-mon">
+        <h3>No Pokémon yet!</h3>
+        <p>Head to the Pokédex to catch some.</p>
+        <a href="pokedex.html" class="btn btn--primary" style="margin-top:16px">Go to Pokédex</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- BATTLE HISTORY -->
+  <section class="profile-section" style="background: var(--cream-dark);">
+    <div class="section-header">
+      <h2>Battle History</h2>
+      <p>Every fight this trainer has been in.</p>
+    </div>
+    <div class="battle-log" id="battle-log">
+      <!-- Filled by JS -->
+      <div class="empty-state" id="no-battles">
+        <img src="" alt="" id="no-battles-mon">
+        <h3>No battles yet!</h3>
+        <p>Head to the Battle Arena to start fighting.</p>
+        <a href="battle.html" class="btn btn--primary" style="margin-top:16px">Go to Battle</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__content">
+      <div class="footer__logo">
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt="Pikachu">
+        <span>PokeProgrammers</span>
+      </div>
+      <p class="footer__tagline">Built by trainers, for trainers. 💕</p>
+      <nav class="footer__links">
+        <a href="index.html">Home</a>
+        <a href="trainers.html">Trainers</a>
+        <a href="pokedex.html">Pokédex</a>
+        <a href="party.html">Party</a>
+        <a href="battle.html">Battle</a>
+        <a href="leaderboard.html">Leaderboard</a>
+      </nav>
+      <p class="footer__copy">© 2025 PokeProgrammers. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/trainer-profile.js"></script>
+</body>
+</html>

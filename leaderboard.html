@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leaderboard — PokeProgrammers</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/leaderboard.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="navbar__logo">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt="Pikachu">
+      <span>PokeProgrammers</span>
+    </div>
+
+    <ul class="navbar__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="trainers.html">Trainers</a></li>
+      <li><a href="pokedex.html">Pokédex</a></li>
+      <li><a href="party.html">Party</a></li>
+      <li><a href="battle.html">Battle</a></li>
+      <li><a href="leaderboard.html" class="active">Leaderboard</a></li>
+    </ul>
+
+    <button class="navbar__hamburger">☰</button>
+  </nav>
+
+  <div class="mobile-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="trainers.html">Trainers</a></li>
+      <li><a href="pokedex.html">Pokédex</a></li>
+      <li><a href="party.html">Party</a></li>
+      <li><a href="battle.html">Battle</a></li>
+      <li><a href="leaderboard.html">Leaderboard</a></li>
+    </ul>
+  </div>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <img class="page-header__mon left" src="" alt="">
+    <img class="page-header__mon right" src="" alt="">
+    <div class="page-header__content">
+      <h1>Leaderboard</h1>
+      <p>Top trainers, battle results, and arena dominance.</p>
+    </div>
+  </div>
+
+  <!-- TOP TRAINERS -->
+  <section class="leaderboard-section">
+    <div class="leaderboard-card">
+      <div class="panel-header">
+        <h2>Top Trainers</h2>
+        <p>Sorted by wins and overall performance.</p>
+      </div>
+
+      <div class="trainer-grid" id="trainer-grid">
+        <!-- JS injects trainer cards -->
+      </div>
+
+      <div class="empty-state" id="trainer-empty">
+        <img src="" alt="" id="trainer-empty-mon">
+        <h3>No trainers yet!</h3>
+        <p>Create trainers and start battling to fill the rankings.</p>
+        <a href="trainers.html" class="btn btn--primary" style="margin-top:16px;">Go to Trainers</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECENT BATTLES -->
+  <section class="leaderboard-section">
+    <div class="leaderboard-card">
+      <div class="panel-header">
+        <h2>Recent Battles</h2>
+        <p>The latest arena activity across your trainers.</p>
+      </div>
+
+      <div class="battle-feed" id="battle-feed">
+        <!-- JS injects recent battle cards -->
+      </div>
+
+      <div class="empty-state" id="battle-empty">
+        <img src="" alt="" id="battle-empty-mon">
+        <h3>No battles yet!</h3>
+        <p>Head to the Battle Arena and start the first match.</p>
+        <a href="battle.html" class="btn btn--primary" style="margin-top:16px;">Go to Battle Arena</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__content">
+      <div class="footer__logo">
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt="Pikachu">
+        <span>PokeProgrammers</span>
+      </div>
+      <p class="footer__tagline">Built by trainers, for trainers. 💕</p>
+      <nav class="footer__links">
+        <a href="index.html">Home</a>
+        <a href="trainers.html">Trainers</a>
+        <a href="pokedex.html">Pokédex</a>
+        <a href="party.html">Party</a>
+        <a href="battle.html">Battle</a>
+        <a href="leaderboard.html">Leaderboard</a>
+      </nav>
+      <p class="footer__copy">© 2025 PokeProgrammers. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/leaderboard.js"></script>
+</body>
+</html>

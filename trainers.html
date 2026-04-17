@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trainers — PokeProgrammers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/trainers.css">
+</head>
+<body>
+
+  <!-- NAVBAR (same on every page) -->
+  <nav class="navbar">
+    <div class="navbar__logo">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt="Pikachu">
+      <span>PokeProgrammers</span>
+    </div>
+    <ul class="navbar__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="trainers.html" class="active">Trainers</a></li>
+      <li><a href="pokedex.html">Pokédex</a></li>
+      <li><a href="party.html">Party</a></li>
+      <li><a href="battle.html">Battle</a></li>
+      <li><a href="leaderboard.html">Leaderboard</a></li>
+    </ul>
+    <button class="navbar__hamburger">☰</button>
+  </nav>
+
+  <div class="mobile-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="trainers.html">Trainers</a></li>
+      <li><a href="pokedex.html">Pokédex</a></li>
+      <li><a href="party.html">Party</a></li>
+      <li><a href="battle.html">Battle</a></li>
+      <li><a href="leaderboard.html">Leaderboard</a></li>
+    </ul>
+  </div>
+
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <img class="page-header__mon left"  src="" alt="">
+    <img class="page-header__mon right" src="" alt="">
+    <div class="page-header__content">
+      <h1>Trainer Registry</h1>
+      <p>Create and manage your trainers. Every legend starts here.</p>
+    </div>
+  </div>
+
+
+  <!-- CREATE TRAINER FORM -->
+  <section class="create-section">
+    <div class="create-form" id="create-form">
+      <h2>✚ New Trainer</h2>
+      <div class="form-row">
+        <input type="text" id="trainer-name-input" placeholder="Enter trainer name..." maxlength="20">
+        <button class="btn btn--primary" id="create-btn">Create Trainer</button>
+      </div>
+      <p class="form-hint">* Trainer starts with 0 Pokémon and 0 wins.</p>
+    </div>
+  </section>
+
+
+  <!-- SEARCH BAR -->
+  <section class="search-section">
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="search-input" placeholder="Search trainers by name...">
+      <span class="trainer-count" id="trainer-count">0 Trainers</span>
+    </div>
+  </section>
+
+
+  <!-- TRAINER CARDS GRID -->
+  <section class="trainers-section">
+    <div class="trainers-grid" id="trainers-grid">
+      <!-- Cards injected here by JS -->
+
+      <!-- Empty state shown when no trainers exist -->
+      <div class="empty-state" id="empty-state">
+        <img src="" alt="" id="empty-mon">
+        <h3>No trainers yet!</h3>
+        <p>Create your first trainer above to get started.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- EDIT MODAL -->
+  <!-- Hidden by default. JS adds "open" class to show it -->
+  <div class="modal-overlay" id="edit-modal">
+    <div class="modal">
+      <button class="modal__close" id="modal-close">✕</button>
+      <img src="" alt="" class="modal__mon" id="modal-mon">
+      <h2 class="modal__title">Edit Trainer</h2>
+      <input type="text" id="edit-name-input" placeholder="New trainer name..." maxlength="20">
+      <button class="btn btn--primary" id="save-edit-btn">Save Changes</button>
+    </div>
+  </div>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__content">
+      <div class="footer__logo">
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt="Pikachu">
+        <span>PokeProgrammers</span>
+      </div>
+      <p class="footer__tagline">Built by trainers, for trainers. 💕</p>
+      <nav class="footer__links">
+        <a href="index.html">Home</a>
+        <a href="trainers.html">Trainers</a>
+        <a href="pokedex.html">Pokédex</a>
+        <a href="party.html">Party</a>
+        <a href="battle.html">Battle</a>
+        <a href="leaderboard.html">Leaderboard</a>
+      </nav>
+      <p class="footer__copy">© 2025 PokeProgrammers. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/trainers.js"></script>
+</body>
+</html>

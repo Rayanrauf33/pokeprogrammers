@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokédex — PokeProgrammers</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/pokedex.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="navbar__logo">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt="Pikachu">
+      <span>PokeProgrammers</span>
+    </div>
+    <ul class="navbar__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="trainers.html">Trainers</a></li>
+      <li><a href="pokedex.html" class="active">Pokédex</a></li>
+      <li><a href="party.html">Party</a></li>
+      <li><a href="battle.html">Battle</a></li>
+      <li><a href="leaderboard.html">Leaderboard</a></li>
+    </ul>
+    <button class="navbar__hamburger">☰</button>
+  </nav>
+
+  <div class="mobile-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="trainers.html">Trainers</a></li>
+      <li><a href="pokedex.html">Pokédex</a></li>
+      <li><a href="party.html">Party</a></li>
+      <li><a href="battle.html">Battle</a></li>
+      <li><a href="leaderboard.html">Leaderboard</a></li>
+    </ul>
+  </div>
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <img class="page-header__mon left"  src="" alt="">
+  <img class="page-header__mon right" src="" alt="">
+  <div class="page-header__content">
+    <h1>Pokédex Explorer</h1>
+    <p>Search, discover, and catch Pokémon for your active trainer.</p>
+  </div>
+</div>
+
+  <!-- SEARCH SECTION -->
+  <section class="pokedex-search-section">
+    <div class="search-card">
+      <div class="search-top">
+        <div class="active-trainer-badge" id="active-trainer-badge">
+          Active Trainer: ---
+        </div>
+      </div>
+
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="search-input" placeholder="Search Pokémon by name...">
+        <button class="btn btn--primary" id="search-btn">Search</button>
+      </div>
+
+      <p class="search-hint">
+        Search by name like Pikachu, Eevee, Charizard...
+      </p>
+    </div>
+  </section>
+
+  <!-- POKEMON GRID -->
+  <section class="pokedex-section">
+    <div class="pokemon-grid" id="pokemon-grid">
+      <!-- Cards injected by JS -->
+
+      <div class="empty-state" id="empty-state">
+        <img src="" alt="" id="empty-mon">
+        <h3>No Pokémon found</h3>
+        <p>Try another search or catch a random one.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- RANDOM CATCH BUTTON -->
+  <button class="random-btn" id="random-btn" title="Load random Pokémon">🎲</button>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="pokemon-modal">
+    <div class="pokemon-modal">
+      <button class="modal__close" id="modal-close">✕</button>
+
+      <img src="" alt="" class="pokemon-modal__img" id="modal-img">
+
+      <p class="pokemon-modal__id" id="modal-id">#000</p>
+      <h2 class="pokemon-modal__name" id="modal-name">---</h2>
+
+      <div class="pokemon-modal__types" id="modal-types"></div>
+
+      <div class="pokemon-modal__stats">
+        <div class="pokemon-stat">
+          <span class="pokemon-stat__label">HP</span>
+          <span class="pokemon-stat__value" id="stat-hp">0</span>
+        </div>
+        <div class="pokemon-stat">
+          <span class="pokemon-stat__label">Attack</span>
+          <span class="pokemon-stat__value" id="stat-attack">0</span>
+        </div>
+        <div class="pokemon-stat">
+          <span class="pokemon-stat__label">Defense</span>
+          <span class="pokemon-stat__value" id="stat-defense">0</span>
+        </div>
+      </div>
+
+      <button class="btn btn--primary" id="catch-btn">Catch Pokémon</button>
+    </div>
+  </div>
+<!-- POKEBALL CATCH ANIMATION -->
+<div class="catch-overlay" id="catch-overlay">
+
+  <div class="catch-stage">
+
+    <img id="catch-pokemon" class="catch-pokemon">
+
+    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png"
+         class="catch-ball" id="catch-ball">
+
+    <div class="catch-flash" id="catch-flash"></div>
+
+  </div>
+
+  <p class="catch-text" id="catch-text"></p>
+
+</div>
+  <script src="js/pokedex.js"></script>
+</body>
+</html>
