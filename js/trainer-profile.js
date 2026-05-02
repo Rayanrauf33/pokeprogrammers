@@ -1,7 +1,5 @@
-/* ============================================================
-   trainer-profile.js — Trainer Profile Page
-   Reads trainer ID from sessionStorage, loads their full data
-   ============================================================ */
+
+ 
 
 var SPRITE = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/';
 var ART    = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/';
