@@ -1,7 +1,3 @@
-/* ============================================================
-   battle.js — Final working version
-   ============================================================ */
-
 var ART = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/';
 
 var playerTrainer = null;
