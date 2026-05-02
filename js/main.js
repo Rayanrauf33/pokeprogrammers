@@ -1,7 +1,4 @@
-/* ============================================================
-   main.js — PokeProgrammers Home Page
-   3 jobs: mobile nav, stats bar, leaderboard
-   ============================================================ */
+
 
 
 // ── 1. MOBILE NAV TOGGLE ──────────────────────────────────────
@@ -11,7 +8,7 @@ document.querySelector('.navbar__hamburger').addEventListener('click', function 
 });
 
 
-// ── 2. STATS BAR ──────────────────────────────────────────────
+// ── 2. STATS BAR 
 // Read trainers and battles from localStorage, count and display
 function loadStats() {
   const trainers = JSON.parse(localStorage.getItem('pp_trainers') || '[]');
@@ -66,7 +63,7 @@ var observer = new IntersectionObserver(function(entries) {
 observer.observe(statsBar);
 
 
-// ── 3. MINI LEADERBOARD ───────────────────────────────────────
+// ── 3. MINI LEADERBOARD 
 // Read trainers, sort by wins, show top 3
 function loadLeaderboard() {
   var trainers = JSON.parse(localStorage.getItem('pp_trainers') || '[]');
