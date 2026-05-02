@@ -1,6 +1,3 @@
-/* ============================================================
-   party.js — Party Manager
-   ============================================================ */
 
 var ART = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/';
 var SPRITE = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/';
